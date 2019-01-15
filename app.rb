@@ -3,9 +3,11 @@ require 'slim'
 require 'slim/include'
 
 get '/' do
-  slim :index, :layout => :layout
+  @title = 'sinatra + Slim - top'
+  slim :index
 end
 
 get '/about/' do
+  @title = 'sinatra + Slim - about'
   slim :about
 end
