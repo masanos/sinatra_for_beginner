@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title = @title
+    meta charset="utf-8" /
+    meta content="ie=edge" http-equiv="x-ua-compatible" /
+    meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" /
+    meta name="keywords" content=""
+    include includes/css
+  body
+    #header.d-flex.flex-column
+      include includes/header
+    #body.flex-grow-1.container-fluid
+      == yield
+    #footer.flex-grow-1.container-fluid
+      include includes/footer
+sass:
+  #body
+    min-height: 85vh
